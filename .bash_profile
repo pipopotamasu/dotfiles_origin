@@ -13,3 +13,4 @@ export PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+alias ll='ls -la'
