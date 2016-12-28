@@ -14,3 +14,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 alias ll='ls -la'
+PATH="/usr/local/heroku/bin:$PATH"
