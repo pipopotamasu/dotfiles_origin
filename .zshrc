@@ -24,10 +24,11 @@ SAVEHIST=1000000
 # 2行表示
 #PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 #%# "
-# 2行表示(カレントディレクトリ表示あり)
+# 2行表示(カレントディレクトリ表示あり) 家のmacではホスト名出さないでおく
 PROMPT="
  %{${fg[yellow]}%}%~%{${reset_color}%} 
-[%n@${HOST}]$ "
+[%n]$ "
+
 
 PROMPT2='[%n]> '
 
@@ -59,6 +60,9 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
+########################################
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init - zsh)"
 
 ########################################
 # vcs_info
