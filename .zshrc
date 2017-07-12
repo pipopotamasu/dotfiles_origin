@@ -61,10 +61,17 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 ########################################
-export PATH="$HOME/.rbenv/bin:$PATH" 
-eval "$(rbenv init - zsh)"
+# rbenv用
+# export PATH="$HOME/.rbenv/bin:$PATH" 
+# eval "$(rbenv init - zsh)"
 
 ########################################
+# pyenv用
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+#######################################
 # vcs_info
 autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
